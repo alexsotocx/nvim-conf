@@ -4,7 +4,7 @@ local function map(mode, l, r, opts)
   vim.keymap.set(mode, l, r, opts)
 end
 
-vim.g.mapleader = ' '
+vim.g.mapleader = ','
 
 -- Navigation
 map('n', '<C-Left>', '<cmd>tabprevious<CR>')
