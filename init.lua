@@ -1,0 +1,5 @@
+require('init_packer')
+require('core/options')
+require('core/keymaps')
+require('plugins/fzf')
+require('plugins/nerd_tree')
