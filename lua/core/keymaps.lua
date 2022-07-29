@@ -18,9 +18,6 @@ map('t',  '<Leader><Esc>', '<C-\\><C-N>')
 
 allModes = {'n', 'i', 'v', 't'}
 
-
-map(allModes, '<C-b>', '<cmd>NERDTreeToggle<CR>')
-
-map(allModes, '<C-s>', '<cmd>w<CR>') -- Save
+map(allModes, '<C-s>', '<cmd>w<CR>', {desc = 'Save'})
 map(allModes, '<A-w>', '<cmd>bd<CR>') -- Quit the buffer
 
