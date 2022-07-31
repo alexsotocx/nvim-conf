@@ -1,7 +1,7 @@
 local lsp = require('lspconfig')
 local lformat = require("lsp-format")
 
-local map = require('lua/util').map
+local map = require('util').map
 
 -- Intialize format
 lformat.setup {}
@@ -42,7 +42,7 @@ local on_attach = function(client, bufnr)
 end
 
 
-local cmp = require('lua/plugins/lsp/autocomplete')
+local cmp = require('plugins/lsp/autocomplete')
 
 -- Python
 lsp.pyright.setup { on_attach = on_attach, capabilities = cmp.capabilities }

@@ -1,5 +1,5 @@
-local map = require('../util').map
-local allModes = require('../util').allModes
+local map = require('util').map
+local allModes = require('util').allModes
 
 -- keymaps
 map(allModes, '<C-p>', '<cmd>Files<CR>', {desc = 'Open the files finder'})

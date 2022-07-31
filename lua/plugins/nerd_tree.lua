@@ -1,5 +1,5 @@
-local map = require('../util').map
-local allModes = require('../util').allModes
+local map = require('util').map
+local allModes = require('util').allModes
 
 vim.g.NERDTreeShowHidden = 1
 vim.g.NERDTreeMinimalUI = 1
