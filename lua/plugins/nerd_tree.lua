@@ -1,8 +1,5 @@
-local function map(mode, l, r, opts)
-  opts = opts or {}
-  opts.buffer = bufnr
-  vim.keymap.set(mode, l, r, opts)
-end
+local map = require('../util').map
+local allModes = require('../util').allModes
 
 vim.g.NERDTreeShowHidden = 1
 vim.g.NERDTreeMinimalUI = 1

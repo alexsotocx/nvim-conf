@@ -1,23 +1,19 @@
-local function map(mode, l, r, opts)
-  opts = opts or {}
-  opts.buffer = bufnr
-  vim.keymap.set(mode, l, r, opts)
-end
+local util = require('../util')
 
 vim.g.mapleader = ','
 
 -- Navigation
-map('n', '<C-Left>', '<cmd>tabprevious<CR>')
-map('n', '<C-Right>', '<cmd>tabnext<CR>')
-map('n', '<C-S-Left>', '<C-w>h') -- Move to left
-map('n', '<C-S-Down>', '<C-w>j') -- Move Down
-map('n', '<C-S-Up>', '<C-w>k') -- Move Up
-map('n', '<C-S-Right>', '<C-w>l') -- Move Right
+util.map('n', '<C-Left>', '<cmd>tabprevious<CR>')
+util.map('n', '<C-Right>', '<cmd>tabnext<CR>')
+util.map('n', '<C-S-Left>', '<C-w>h') -- Move to left
+util.map('n', '<C-S-Down>', '<C-w>j') -- Move Down
+util.map('n', '<C-S-Up>', '<C-w>k') -- Move Up
+util.map('n', '<C-S-Right>', '<C-w>l') -- Move Right
 
-map('t',  '<Leader><Esc>', '<C-\\><C-N>') 
+util.map('t',  '<Leader><Esc>', '<C-\\><C-N>') 
 
 allModes = {'n', 'i', 'v', 't'}
 
-map(allModes, '<C-s>', '<cmd>w<CR>', {desc = 'Save'})
-map(allModes, '<A-w>', '<cmd>bd<CR>') -- Quit the buffer
+util.map(allModes, '<C-s>', '<cmd>w<CR>', {desc = 'Save'})
+util.map(allModes, '<A-w>', '<cmd>bd<CR>') -- Quit the buffer
 

@@ -38,6 +38,8 @@ opt.hidden = true           -- Enable background buffers
 opt.history = 100           -- Remember N lines in history
 opt.lazyredraw = true       -- Faster scrolling
 
+-- Auto complete
+opt.completeopt='menu,menuone,noselect'
 
 vim.cmd('colorscheme dracula')
 
