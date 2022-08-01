@@ -1,11 +1,12 @@
-local utilF = {}
+local util = {}
 
-function utilF.map(mode, l, r, opts)
+function util.printf(...) return string.format(...) end
+
+function util.map(mode, l, r, opts)
   opts = opts or {}
-  opts.buffer = bufnr
   vim.keymap.set(mode, l, r, opts)
 end
 
-utilF.allModes = {'n', 'i', 't', 'v'}
+util.allModes = { 'n', 'i', 't', 'v' }
 
-return utilF
+return util
