@@ -10,10 +10,7 @@ util.map('n', '<C-S-Down>', '<C-w>j') -- Move Down
 util.map('n', '<C-S-Up>', '<C-w>k') -- Move Up
 util.map('n', '<C-S-Right>', '<C-w>l') -- Move Right
 
-util.map('t',  '<Leader><Esc>', '<C-\\><C-N>') 
+util.map('t', '<Leader><Esc>', '<C-\\><C-N>')
 
-allModes = {'n', 'i', 'v', 't'}
-
-util.map(allModes, '<C-s>', '<cmd>w<CR>', {desc = 'Save'})
-util.map(allModes, '<A-w>', '<cmd>bd<CR>') -- Quit the buffer
-
+util.map(util.allModes, '<C-s>', '<cmd>w<CR>', { desc = 'Save' })
+util.map(util.allModes, '<A-w>', '<cmd>bd<CR>', { desc = 'Quit the buffer' })

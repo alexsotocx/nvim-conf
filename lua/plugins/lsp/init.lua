@@ -1,6 +1,5 @@
 local lsp = require('lspconfig')
 local map = require('util').map
-local printf = require('util').printf
 local cmp = require('plugins/lsp/autocomplete')
 
 -- Mappings.
@@ -35,17 +34,7 @@ local on_attach = function(client, bufnr)
   map('n', '<space>ca', vim.lsp.buf.code_action, mapopts)
   map('n', 'gr', vim.lsp.buf.references, mapopts)
   map('n', '<space>f', vim.lsp.buf.formatting, mapopts)
-
-
-  vim.api.nvim_create_autocmd('BufWritePre', {
-    buffer = bufnr,
-    callback = function()
-      vim.lsp.buf.formatting_sync()
-    end
-  })
 end
-
-
 
 -- Python
 lsp.pyright.setup { on_attach = on_attach, capabilities = cmp.capabilities }
@@ -77,7 +66,6 @@ lsp.sumneko_lua.setup {
 }
 
 lsp.efm.setup {
-  on_attach = on_attach, capabilities = cmp.capabilities,
   init_options = { documentFormatting = true },
   settings = {
     rootMarkers = { ".git/" },
