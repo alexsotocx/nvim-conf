@@ -8,3 +8,4 @@ vim.g.NERDTreeStatusline = ''
 
 
 map(allModes, '<C-b>', '<cmd>NERDTreeToggle<CR>')
+map(allModes, '<A-b>', '<cmd>NERDTreeFind<CR>')
