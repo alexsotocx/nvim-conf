@@ -3,7 +3,7 @@ local allModes = require('util').allModes
 
 -- keymaps
 map(allModes, '<C-p>', '<cmd>Files<CR>', {desc = 'Open the files finder'})
-map(allModes, '<leader>p', '<cmd>Buffers<CR>', {desc = 'Open the buffers explorer'})
+map(allModes, '<Leader>p', '<cmd>Buffers<CR>', {desc = 'Open the buffers explorer'})
 
 -- Ignore
 vim.env.FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules --ignore .git -g ""'
