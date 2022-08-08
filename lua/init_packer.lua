@@ -15,6 +15,14 @@ return require('packer').startup(function(use)
   -- colorscheme
   use { 'dracula/vim', as = 'dracula' }
   use 'EdenEast/nightfox.nvim'
+  use {
+    'sonph/onehalf',
+    rtp = 'vim',
+    config = function()
+      g.airline_theme = 'onehalflight'
+      vim.cmd [[colorscheme onehalfdark]]
+    end
+  }
 
   -- File filder
   use 'junegunn/fzf'
