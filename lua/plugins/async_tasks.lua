@@ -8,5 +8,5 @@ vim.g.asynctasks_extra_config = {
 }
 
 -- key maps
-map('n', '<Leader>r', '<cmd>AsyncTask file-run<cr>', {desc="Run file"})
-map('n', '<Leader>op', '<cmd>AsyncTask file-gedit<cr>', {desc="Open in gedit"})
+map('n', '<Leader>r', '<cmd>AsyncTask file-run<cr>', { desc = "Run file" })
+map('n', '<Leader>op', '<cmd>AsyncTask file-gedit<cr>', { desc = "Open in gedit" })

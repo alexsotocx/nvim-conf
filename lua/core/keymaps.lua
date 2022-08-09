@@ -14,3 +14,4 @@ util.map('t', '<Leader><Esc>', '<C-\\><C-N>')
 
 util.map(util.allModes, '<C-s>', '<cmd>w<CR>', { desc = 'Save' })
 util.map(util.allModes, '<A-w>', '<cmd>bd<CR>', { desc = 'Quit the buffer' })
+util.map('n', '<Leader>mr', '<cmd>source $MYVIMRC', {desc = 'Reload config nvim'})

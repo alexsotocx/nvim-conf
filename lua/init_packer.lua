@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
     'sonph/onehalf',
     rtp = 'vim',
     config = function()
-      g.airline_theme = 'onehalflight'
+      vim.g.airline_theme = 'onehalflight'
       vim.cmd [[colorscheme onehalfdark]]
     end
   }

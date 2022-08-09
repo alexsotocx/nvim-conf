@@ -1,6 +1,8 @@
 local lsp = require('lspconfig')
 local map = require('util').map
+local split = require('util').split
 local cmp = require('plugins/lsp/autocomplete')
+
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -36,10 +38,13 @@ local on_attach = function(client, bufnr)
   map('n', '<space>f', vim.lsp.buf.formatting, mapopts)
 end
 
--- Python
-lsp.pyright.setup { on_attach = on_attach, capabilities = cmp.capabilities }
+require('plugins/lsp/pyright')(on_attach, cmp.capabilities)
+
 -- golang
-lsp.gopls.setup { on_attach = on_attach, capabilities = cmp.capabilities }
+lsp.gopls.setup { on_attach = function(client, bufnr)
+  on_attach(client, bufnr)
+end,
+  capabilities = cmp.capabilities }
 -- lua
 lsp.sumneko_lua.setup {
   on_attach = on_attach, capabilities = cmp.capabilities,
@@ -63,16 +68,4 @@ lsp.sumneko_lua.setup {
       },
     },
   },
-}
-
-lsp.efm.setup {
-  init_options = { documentFormatting = true },
-  settings = {
-    rootMarkers = { ".git/" },
-    languages = {
-      python = {
-        { formatCommand = "autopep8 -", formatStdin = true }
-      }
-    }
-  }
 }
