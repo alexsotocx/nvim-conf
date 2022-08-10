@@ -46,4 +46,4 @@ opt.completeopt = 'menu,menuone,noselect'
 vim.o.cursorline = true
 g.syntax_on = true
 g.cursorline = true
-g.airline_theme = 'onehalflight'
+vim.cmd("colorscheme dracula")

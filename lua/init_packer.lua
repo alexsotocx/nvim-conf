@@ -17,11 +17,7 @@ return require('packer').startup(function(use)
   use 'EdenEast/nightfox.nvim'
   use {
     'sonph/onehalf',
-    rtp = 'vim',
-    config = function()
-      vim.g.airline_theme = 'onehalflight'
-      vim.cmd [[colorscheme onehalfdark]]
-    end
+    rtp = 'vim'
   }
 
   -- File filder
