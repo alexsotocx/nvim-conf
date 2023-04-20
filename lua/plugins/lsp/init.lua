@@ -39,6 +39,7 @@ local on_attach = function(client, bufnr)
 end
 
 require('plugins/lsp/pyright')(on_attach, cmp.capabilities)
+require('plugins/lsp/typescript')(on_attach, cmp.capabilities)
 
 -- golang
 lsp.gopls.setup { on_attach = function(client, bufnr)

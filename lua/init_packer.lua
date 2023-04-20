@@ -47,4 +47,6 @@ return require('packer').startup(function(use)
   -- Run task per project and file
   use 'skywind3000/asynctasks.vim'
   use 'skywind3000/asyncrun.vim'
+
+  use { 'neoclide/coc.nvim', branch = 'release' }
 end)
